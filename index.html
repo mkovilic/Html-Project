@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="mozzila">
+    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+    <link rel="stylesheet" href="vendors/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <link rel="stylesheet" href="vendors/css/ionicons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" type="text/css">
+    <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="resources/css/lightbox.css">
+    <title>Projektanž</title>
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css" />
+    <style type="text/css">
+        a.fancybox img {
+            border: none;
+            box-shadow: 0 1px 7px rgba(0, 0, 0, 0.6);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header">
+        <nav>
+            <div class="row">
+                <a href="#header"> <img src="resources/img/logo.png" alt="pastasuta logo" class="logo"></a>
+                <a href="#header"> <img src="resources/img/logo.png" alt="pastasuta logo" class="logo-black"></a>
+
+                <ul class="main-nav js--main-nav">
+                    <li><a href="#" id="order" class="navbar-link">Order</a></li>
+                    <li><a href="#features"> food delivery</a></li>
+                    <li><a href="#works"> How it works</a></li>
+                    <li><a href="#cities"> Our cities</a></li>
+                    <li><a href="#plans"> Sign up</a></li>
+                </ul>
+                <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
+            </div>
+        </nav>
+
+        <div class="hero-text-box">
+            <h1>Welcome to Pastasuta.<br> Chefs Mario Masterpiece Pasta.</h1>
+            <a class="btn btn-full js--scroll-to-plans" href="#">I’m hungry</a>
+            <a class="btn btn-ghost js--scroll-to-start" href="#">Show me more </a>
+        </div>
+
+
+    </header>
+
+    <!--shoping cart -->
+    <div id="shcart">
+        <p id="closeOrder"><i class="ion-close-round"></i></p>
+        <p id="cartMobileView"><i class="ion-ios-cart-outline"></i></p>
+        <div class="Parent">
+            <div class="Child">
+                <div id="loading">
+                    <p id="loadingText">Učitavanje...</p>
+                    <img id="gif" src="resources/css/img/loading.gif" alt="">
+                </div>
+            </div>
+
+            <div id="cartKosaricaContainer" class="Child">
+                <div class="cart">
+                    <p>Your orders</p>
+                    <table valign="center" align="center" width="100%" rules="groups">
+                        <colgroup>
+                            <col width="10px">
+                            <col>
+                            <col width="50px">
+                            <col width="50px">
+                            <col width="10px">
+                        </colgroup>
+                        <thead align="center">
+                            <tr>
+                                <th>ID</th>
+                                <th align="left">TITLE</th>
+                                <th>QUANTITY</th>
+                                <th>PRICE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tbody align="center" id="basketContent">
+
+
+
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    Total:
+                                </td>
+                                <td id="basketPrice" class="inKn">
+                                    0.00
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="popup">
+                <div id="popupTitle">
+                    <p id="title">Koristite drugi web preglednik za narudžbe</p>
+                </div>
+
+                <p>Količina:</p>
+                <input type="number" min="1" value="1" id="popupQuantity" />
+                <p class="times inKn"></p>
+                <p>Napomena:</p>
+                <textarea id="popupRemark"></textarea>
+                <button class="btn btn-full" id="addToCart">Dodaj</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <section class="section-features js--section-features" id="features">
+        <div class="row">
+            <h2>Get food fast &mdash; not fast food.</h2>
+            <p class="long-copy">
+                Hello, we’re Pastasuta, your new premium food delivery service. We know you’re always busy. No time for
+                cooking. So let us take care of that, we’re really good at it, we promise!
+            </p>
+        </div>
+        <div class="row js--wp-1">
+            <div class="col span-1-of-4 box">
+                <i class="ion-ios-infinite-outline icon-big"></i>
+                <h3>Up to 365 days/year</h3>
+                <p>
+                    Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage.
+                    You can also choose to order more flexibly if that's your style.
+
+                </p>
+            </div>
+            <div class="col span-1-of-4 box">
+                <i class="ion-ios-stopwatch-outline icon-big"></i>
+                <h3>Ready in 20 minutes</h3>
+                <p>
+                    You're only twenty minutes away from your delicious and super healthy meals delivered right to your
+                    home. We work with the best chefs in each town to ensure that you're 100% happy.
+
+                </p>
+            </div>
+            <div class="col span-1-of-4 box">
+                <i class="ion-ios-nutrition-outline icon-big"></i>
+                <h3>100% Italian</h3>
+                <p>
+                    All our Pasta are fresh, organic and local. Animals are raised without added hormones or
+                    antibiotics. Good for your health, the environment, and it also tastes better!
+
+                </p>
+            </div>
+            <div class="col span-1-of-4 box">
+                <i class="ion-ios-cart-outline icon-big"></i>
+                <h3>Order anything</h3>
+                <p>
+                    We don't limit your creativity, which means you can order whatever you feel like. You can also
+                    choose from our menu containing over 100 delicious meals. It's up to you!
+
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="section-meals">
+        <ul class="meals-showcase clearfix">
+            <li>
+                <figure class="meal-photo">
+                    <img class="fancybox" src="resources/css/img/1.jpg" alt="Burger with fries" id="myImg">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img  class="fancybox"src="resources/css/img/2.jpg" alt="Simple italian pizza with cherry tomatoes">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img  class="fancybox"src="resources/css/img/3.jpg" alt=Chicken breast steak with vegetables">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img  class="fancybox"src="resources/css/img/4.jpg" alt="Tortilla">
+                </figure>
+            </li>
+        </ul>
+        <ul class="meals-showcase clearfix">
+            <li>
+                <figure class="meal-photo">
+                    <img  class="fancybox"src="resources/css/img/5.jpg" alt="Paleo beef steak with vegetables">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img  class="fancybox"src="resources/css/img/6.jpg" alt="Healthy baguette with egg and vegetables">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img class="fancybox" src="resources/css/img/7.jpg" alt="Pasta">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img  class="fancybox" src="resources/css/img/8.jpg" alt="Granola with cherries and strawberries">
+                </figure>
+            </li>
+        </ul>
+    </section>
+    <section class="section-steps" id="works">
+        <div class="row">
+            <h2>How it works &mdash; Simple as 1, 2, 3</h2>
+        </div>
+        <div class="row">
+            <div class="col span-1-of-2 steps-box">
+                <img src="resources/css/img/app-iPhone.png" alt="omnifood app on iphone" class="app-screen js--wp-2">
+            </div>
+            <div class="col span-1-of-2 steps-box">
+                <div class="works-step">
+                    <div>
+                        1
+                    </div>
+                    <p>
+                        Choose the subscription plan that best fits your needs and sign up today.
+                    </p>
+                </div>
+                <div class="works-step">
+                    <div>
+                        2
+                    </div>
+                    <p>
+                        Order your delicious meal using our mobile app or website. Or you can even call us!
+                    </p>
+                </div>
+                <div class="works-step">
+                    <div>
+                        3
+                    </div>
+                    <p>
+                        Enjoy your meal after less than 20 minutes. See you the next time!
+                    </p>
+                </div>
+                <a href="#" class="btn-app"><img src="resources/css/img/download-app.svg" alt="app store button"></a>
+                <a href="#" class="btn-app"><img src="resources/css/img/download-app-android.png"
+                        alt="play store button"></a>
+            </div>
+        </div>
+    </section>
+    <section class="section-cities" id="cities">
+        <div class="row">
+            <h2> We're currently in these cities</h2>
+        </div>
+        <div class="row js--wp-3">
+            <div class="col span-1-of-4 box">
+                <img src="resources/css/img/sibenik.jpg" alt="sibenik">
+                <h3>Šibenik</h3>
+                <div class="city-feature">
+                    <i class="ion-person icon-small"></i>
+                    1630+ happy eaters
+                </div>
+                <div class="city-feature">
+                    <i class="ion-ios-star icon-small"></i>
+                    62+ top chefs
+                </div>
+                <div class="city-feature">
+                    <i class="ion-social-twitter icon-small"></i>
+                    <a href="#"> @pastasuta_si</a>
+                </div>
+            </div>
+            <div class="col span-1-of-4 box">
+                <img src="resources/css/img/Split.jpg" alt="Split">
+                <h3>Split</h3>
+                <div class="city-feature">
+                    <i class="ion-person icon-small"></i>
+                    3200+ happy eaters
+                </div>
+                <div class="city-feature">
+                    <i class="ion-ios-star icon-small"></i>
+                    160+ top chefs
+                </div>
+                <div class="city-feature">
+                    <i class="ion-social-twitter icon-small"></i>
+                    <a href="#"> @pastasuta_st</a>
+                </div>
+            </div>
+            <div class="col span-1-of-4 box">
+                <img src="resources/css/img/zadar.jpg" alt="zadar">
+                <h3>Zadar</h3>
+                <div class="city-feature">
+                    <i class="ion-person icon-small"></i>
+                    2000+ happy eaters
+                </div>
+                <div class="city-feature">
+                    <i class="ion-ios-star icon-small"></i>
+                    110+ top chefs
+                </div>
+                <div class="city-feature">
+                    <i class="ion-social-twitter icon-small"></i>
+                    <a href="#"> @pastasuta_zd</a>
+                </div>
+            </div>
+            <div class="col span-1-of-4 box">
+                <img src="resources/css/img/dubrovnik.jpg" alt="dubrovnik">
+                <h3>Dubrovnik</h3>
+                <div class="city-feature">
+                    <i class="ion-person icon-small"></i>
+                    1200+ happy eaters
+                </div>
+                <div class="city-feature">
+                    <i class="ion-ios-star icon-small"></i>
+                    50+ top chefs
+                </div>
+                <div class="city-feature">
+                    <i class="ion-social-twitter icon-small"></i>
+                    <a href="#">@pastasuta_du</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-testimonals">
+        <div class="row">
+            <h2>Our customers can't live without us</h2>
+        </div>
+        <div class="row">
+            <div class="col span-1-of-3">
+                <blockquote>
+                    Pastasuta is just awesome! I just launched a startup which leaves me with no time for cooking, so
+                    Pastasuta is a life-saver. Now that I got used to it, I couldn't live without my daily meals!
+                    <cite><img src="resources/css/img/customer-1.jpg" alt="Jason"> Jason Timberland</cite>
+                </blockquote>
+            </div>
+            <div class="col span-1-of-3">
+                <blockquote>
+                    Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food
+                    delivery here in Šibenik, but no one comes even close to Pastasuta. Me and my family are so in love!
+                    <cite><img src="resources/css/img/customer-2.jpg" alt="Maria"> Maria Carey</cite>
+                </blockquote>
+            </div>
+            <div class="col span-1-of-3">
+                <blockquote>
+                    I was looking for a quick and easy food delivery service in Split. I tried a lot of them and
+                    ended up with Pastasuta. Best food delivery service in the Dalmatia. Keep up the great work!
+                    <cite><img src="resources/css/img/customer-3.jpg" alt="Morgan">Morgan Brownman
+                    </cite>
+                </blockquote>
+            </div>
+        </div>
+
+    </section>
+    <section class="section-plans js--section-plans" id="plans">
+        <div class="row">
+            <h2>Start eating healthy today</h2>
+        </div>
+        <div class=row>
+            <div class="col span-1-of-3">
+                <div class="plan-box js--wp-4">
+                    <h3>Premium</h3>
+                    <p class="plan-price">$99 <span>/ month</span></p>
+                    <p class="plan-price-meal">That’s only 13.30$ per meal</p>
+
+                    <div>
+                        <ul>
+                            <li>
+                                <i class="ion-checkmark-round icon-small">
+                                </i>
+                                1 meal every day
+                            </li>
+                            <li>
+                                <i class="ion-checkmark-round icon-small">
+                                </i>
+                                Order 24/7
+                            </li>
+                            <li>
+                                <i class="ion-checkmark-round icon-small">
+                                </i>
+                                Access to newest creations
+                            </li>
+                            <li>
+                                <i class="ion-checkmark-round icon-small">
+                                </i>
+                                Free delivery
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <a href="#" class="btn btn-full"> Sign up now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col span-1-of-3">
+                <div class="plan-box">
+                    <h3>Pro</h3>
+                    <p class="plan-price">59$ <span>/ month</span></p>
+                    <p class="plan-price-meal">That’s only 14.90$ per meal</p>
+
+                    <div>
+                        <ul>
+                            <li>
+                                <i class="ion-checkmark-round icon-small">
+                                </i>
+                                1 meal 10 days/month
+                            </li>
+                            <li>
+                                <i class="ion-checkmark-round icon-small">
+                                </i>
+                                Order 24/7
+                            </li>
+                            <li>
+                                <i class="ion-checkmark-round icon-small">
+                                </i>
+                                Access to newest creations
+                            </li>
+                            <li>
+                                <i class="ion-checkmark-round icon-small">
+                                </i>
+                                Free delivery
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <a href="#" class="btn btn-ghost"> Sign up now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col span-1-of-3">
+                <div class="plan-box">
+                    <h3>Starter</h3>
+                    <p class="plan-price">$9 <span>/ meal</span></p>
+                    <p class="plan-price-meal">&nbsp;</p>
+
+                    <div>
+                        <ul>
+                            <li>
+                                <i class="ion-checkmark-round icon-small">
+                                </i>
+                                1 meal
+                            </li>
+                            <li>
+                                <i class="ion-checkmark-round icon-small">
+                                </i>
+                                Order from 8 am to 12 pm
+                            </li>
+                            <li>
+                                <i class="ion-ios-close-empty icon-small">
+                                </i>
+
+                            </li>
+                            <li>
+                                <i class="ion-checkmark-round icon-small">
+                                </i>
+                                Free delivery
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <a href="#" class="btn btn-ghost"> Sign up now</a>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="section-form">
+        <div class="row">
+            <h2> Contact Us</h2>
+            <div class="row">
+                <form id="contact-form" class="contact-form" action="http://www.fulek.com/VUA/SUPIT/ContactUs"
+                    method="get">
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="name" id="name" placeholder="Your name " required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="email">E-mail</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="email" name="email" id="email" placeholder="Your email " required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="importance">Message importance:</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <select name="importance" id="importance">
+                                <option value="1">High</option>
+                                <option value="0">Normal</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="newsletter ">Newsletter?</label>
+                            <input type="hidden" value="false" name="newsletter" id="formNewsletterHidden">
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="checkbox" name="newsletter " id="newsletter " checked value="true">Yes, please!
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="message">Your message:</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <textarea name="message" placeholder="Maximum 200 characters..." id="message"
+                                maxlength="200"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="">&nbsp;</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="submit" value="Send">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col span-1-of-2">
+                <ul class="footer-nav">
+                    <li> <a href="#"> About us</a></li>
+                    <li> <a href="#"> Blog</a></li>
+                    <li> <a href="#"> Press</a></li>
+                    <li> <a href="#"> iOS App</a></li>
+                    <li> <a href="#"> Android App</a></li>
+                </ul>
+            </div>
+            <div class="col span-1-of-2">
+                <ul class="social-links">
+                    <li><a href=""><i class="ion-social-facebook"></i></a></li>
+                    <li><a href=""><i class="ion-social-twitter"></i></a></li>
+                    <li><a href=""><i class="ion-social-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <p>
+                Copyright &copy; 2019 by Mate Kovilić. All rights reserved.
+            </p>
+        </div>
+    </footer>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" ></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="vendors/js/jquery.waypoints.min.js"></script>
+    <script src="resources/js/script.js"></script>
+    <script src="resources/js/jelovnik.js"></script>
+    <script src="resources/js/lightbox.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript"
+        src="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.pack.min.js"></script>
+    <script type="text/javascript">
+        $(function ($) {
+            var addToAll = false;
+            var gallery = true;
+            var titlePosition = 'inside';
+            $(addToAll ? 'img' : 'img.fancybox').each(function () {
+                var $this = $(this);
+                var title = $this.attr('title');
+                var src = $this.attr('data-big') || $this.attr('src');
+                var a = $('<a href="#" class="fancybox"></a>').attr('href', src).attr('title', title);
+                $this.wrap(a);
+            });
+            if (gallery)
+                $('a.fancybox').attr('rel', 'fancyboxgallery');
+            $('a.fancybox').fancybox({
+                titlePosition: titlePosition
+            });
+        });
+        $.noConflict();
+    </script>
+</body>
+
+</html>
+
+
+<!--http://www.fulek.com/VUA/SUPIT/GetCategoriesAndFoods -->
